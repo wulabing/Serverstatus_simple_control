@@ -2,7 +2,7 @@
 # author:wulabing
 # this script is a simple ServerStatus control script
 
-web_directory="/home/wwwroot/www.xiaobingss.com/public/status"
+web_directory="your website directory"
 serverStatus_directory="/root/ServerStatus/server"
 
 PID=`ps -ef| grep "sergate"| grep -v grep | awk '{print $2}'`
