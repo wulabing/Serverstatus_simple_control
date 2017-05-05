@@ -1,7 +1,15 @@
 #!/bin/bash
-# author:wulabing
-# this script is a simple ServerStatus control script
 
+#====================================================
+#	System Request:Debian 7+/Ubuntu 14.04+/Centos 6+
+#	Author:	wulabing
+#	Dscription: Serverstatus_simple_control
+#	Version: 1.0
+# 	Blog: https://www.wulabing.com
+#   	Special thanks: Toyo
+#====================================================
+
+sh_version="1.0"
 web_directory="your website directory"
 serverStatus_directory="/root/ServerStatus/server"
 
