@@ -14,7 +14,7 @@ fi
 
 if [ ! -d "$serverStatus_directory" ]; then
 	echo "please check out the serverStatus_directory"
-	# exit
+	exit
 fi
 
 case "$1" in
