@@ -1,4 +1,7 @@
 # Serverstatus_simple_control
+
+本脚本适配 Serverstatus中文版 https://github.com/wulabing/ServerStatus
+
 # 更新
 ### 2017-05-06
 
