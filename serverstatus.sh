@@ -4,38 +4,58 @@
 #	System Request:Debian 7+/Ubuntu 14.04+/Centos 6+
 #	Author:	wulabing
 #	Dscription: Serverstatus_simple_control
-#	Version: 1.0
+#	Version: 1.1
 # 	Blog: https://www.wulabing.com
-#   	Special thanks: Toyo
+#	Special thanks: Toyo
 #====================================================
 
-sh_version="1.0"
+#fonts color
+Green="\033[32m" 
+Red="\033[31m" 
+Yellow="\033[33m"
+GreenBG="\033[42;37m"
+RedBG="\033[41;37m"
+Font="\033[0m"
+
+
+#notification information
+Info="${Green}[Info]${Font}"
+OK="${Green}[OK]${Font}"
+Error="${Red}[Error]${Font}"
+Notification="${Yellow}[Notification]${Font}"
+
+
+sh_version="1.1"
 web_directory="your website directory"
 serverStatus_directory="/root/ServerStatus/server"
 
 PID=`ps -ef| grep "sergate"| grep -v grep | awk '{print $2}'`
 
 if [ ! -d "$web_directory" ]; then
-	echo "please check out the web_directory,"
+	echo -e "${Error} please check out the web_directory,"
 	exit
 fi
 
 if [ ! -d "$serverStatus_directory" ]; then
-	echo "please check out the serverStatus_directory"
+	echo -e "${Error} please check out the serverStatus_directory"
 	exit
 fi
 
 case "$1" in
 	start)
 		if [ ! -z ${PID} ]; then
-			echo "ServerStatus has already running"
+			echo -e "${Notification} ServerStatus has already running"
 		else
 			cd "$serverStatus_directory"
 				nohup ./sergate --config=config.json --web-dir="$web_directory" &
 				sleep 1
 				printf "\n"
 				sleep 2
-				echo "ServerStatus start" 
+				if [ "$?" -eq 0 ]; then
+					echo -e "${OK} ServerStatus start" 
+				else
+					echo -e "${Error} ServerStatus not running"
+				fi
 
 		fi
 		;;
@@ -43,18 +63,18 @@ case "$1" in
 		if [ ! -z ${PID} ]; then
 			kill -9 ${PID} &>/dev/null
 				if [ "$?" -eq 0 ]; then
-					echo "the ServerStatus stop" 
+					echo -e "${Notification} the ServerStatus stop" 
 				fi
 		else
-			echo "the ServerStatus is not running" 
+			echo -e "${Error} the ServerStatus is not running" 
 			
 		fi
 		;;
 	status)
 		if [ ! -z ${PID} ]; then
-			 echo "the server is running" 
+			 echo -e "${OK} the server is running" 
 		else
-			 echo "the server is not running" 
+			 echo -e "${Notification} the server is not running" 
 		fi
 		;;
 	*)
