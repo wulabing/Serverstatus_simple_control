@@ -4,6 +4,13 @@
 
 # 更新
 ### 2017-05-06
+version 1.1.2
+
+update:
+
+1.judgement update (more exactly)
+
+2.bug fixed
 
 version 1.1
 
