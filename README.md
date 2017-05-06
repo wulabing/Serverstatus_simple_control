@@ -4,7 +4,7 @@
 
 # 更新
 ### 2017-05-06
-version 1.1.2
+#### version 1.1.2
 
 update:
 
@@ -12,7 +12,7 @@ update:
 
 2.bug fixed
 
-version 1.1
+#### version 1.1
 
 update
 
@@ -22,7 +22,7 @@ update
 
 ### 2017-05-05
 
-version 1.0
+#### version 1.0
 
 # 练习用脚本
 这是一个非常简单的serverStatus的控制脚本，目前仅提供 server 的 开启，关闭，状态查询服务。
