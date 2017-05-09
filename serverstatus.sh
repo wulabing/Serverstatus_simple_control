@@ -26,7 +26,7 @@ Notification="${Yellow}[Notification]${Font}"
 
 
 sh_version="1.1.2"
-#web_directory="your website directory"
+web_directory="your website directory"
 serverStatus_directory="/root/ServerStatus/server"
 
 PID=`ps -ef| grep "sergate"| grep -v grep | awk '{print $2}'`
