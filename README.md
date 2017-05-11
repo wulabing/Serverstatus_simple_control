@@ -55,3 +55,13 @@ serverStatus_client_directory 目录对应 serverStatus client 根目录
 
 client   对应你所使用的client客户端名称（client-linux.py 或 client-psutil.py ）
 
+# 相关开源项目，感谢：
+  ServerStatus 中文版：https://github.com/tenyue/ServerStatus
+  
+  ServerStatus：https://github.com/BotoX/ServerStatus
+  
+  mojeda: https://github.com/mojeda
+  
+  mojeda's ServerStatus: https://github.com/mojeda/ServerStatus
+  
+  BlueVM's project: http://www.lowendtalk.com/discussion/comment/169690#Comment_169690
