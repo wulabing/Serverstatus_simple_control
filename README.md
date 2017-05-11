@@ -3,6 +3,14 @@
 本脚本适配 Serverstatus中文版 https://github.com/tenyue/ServerStatus
 
 # 更新
+### 2017-05-11
+#### version 2.0
+update
+
+1.增加client的一键安装脚本，请按照server端添加的配置文件，根据安装过程提示进行安装
+
+2.修复 bug
+
 ### 2017-05-09
 
 update
